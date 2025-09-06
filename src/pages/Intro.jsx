@@ -9,8 +9,22 @@ const Intro = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg">
+      <h1 className="text-4xl md:text-6xl font-extrabold drop-shadow-lg flex items-center gap-2">
+        <motion.span
+          className="inline-block"
+          animate={{ rotate: [0, 20, -10, 20, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatDelay: 2,
+            ease: "easeInOut",
+          }}
+        >
+          👋
+        </motion.span>
         Hi! I am <span className="text-[#FF0066]">Karan Kumar.</span>
+
+        
       </h1>
 
       <motion.span
@@ -29,7 +43,7 @@ const Intro = () => {
         className="mt-10 px-6 py-3 bg-[#FF0066] text-white font-semibold rounded-2xl shadow-lg hover:bg-[#e6005c] transition"
         whileHover={{ scale: 1.1, rotate: 2 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => window.open('http://www.linkedin.com/in/karankr21', '_blank')}
+        onClick={() => window.open("http://www.linkedin.com/in/karankr21", "_blank")}
       >
         Let’s Connect 🚀
       </motion.button>
